@@ -3,12 +3,23 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+
+import gameConfig from './game-config';
+
 @Component({
-  templateUrl: 'app.html'
+  template: '<phaser-component [gameConfig]="gameConfig" (gameReady)="onGameReady($event)"></phaser-component>'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+
+  /**
+   * Game instance.
+   */
+  public game: Phaser.Game;
+
+  /**
+   * Game configuration.
+   */
+  public readonly gameConfig = gameConfig;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -17,6 +28,16 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+    /**
+   * Game ready event handler.
+   *
+   * @param game Game instance.
+   */
+  public onGameReady(game: Phaser.Game): void {
+    console.log('ready');
+    this.game = game;
   }
 }
 
