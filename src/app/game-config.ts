@@ -1,4 +1,4 @@
-import {MainScene} from './scenes';
+import { MainScene } from './scenes';
 
 const gameConfig: GameConfig = {
   title: 'Brick Hockey',
@@ -6,14 +6,10 @@ const gameConfig: GameConfig = {
   type: Phaser.AUTO,
   width: window.innerWidth,
   height: window.innerHeight,
+  backgroundColor: '#FFFFFF',
   physics: {
     default: 'arcade',
-    arcade: {
-      gravity: {
-        y: 300
-      },
-      debug: false
-    }
+    arcade: {}
   },
   scene: MainScene
 };

@@ -1,0 +1,171 @@
+<html>
+<div class="container">
+  <div class="puck-blue"></div>
+  <div class="puck-green"></div>
+  <div class="puck-yellow"></div>
+</div>
+<div class="paddle"></div>
+<div class="container">
+  <div class="brick-blue"></div>
+  <div class="brick-green"></div>
+  <div class="brick-yellow"></div>
+</div>
+<div class="container">
+    <div class="transform-blue"></div>
+    <div class="transform-green"></div>
+    <div class="transform-yellow"></div>
+</div>
+<div class="field">
+  <div class="goal-brick"></div>
+  <div class="middle">
+    <div class="middle-line"></div>
+    <div class="middle-cercle"></div>
+  </div>
+  <div class="goal-player"></div>
+</div>
+
+</html>
+
+<style>
+
+  .puck-green {
+    height: 20px;
+    width: 20px;
+    background-color: #2FAD00;
+    border-radius: 50%;
+    border: 4px solid #268E00;
+  }
+
+  .puck-blue {
+    height: 20px;
+    width: 20px;
+    background-color: #6D92A0;
+    border: 4px solid #27586B;
+    border-radius: 50%;
+  }
+
+  .puck-yellow {
+    height: 20px;
+    width: 20px;
+    background-color: #FFFEAA;
+    border: 4px solid #D4D46A;
+    border-radius: 50%;
+  }
+
+  .paddle {
+    height: 50px;
+    width: 50px;
+    background-color: #BF001E;
+    border-radius: 50%;
+    border: 10px solid #9D0019;
+  }
+
+  .field {
+    position: relative;
+    height: 850px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 50px;
+  }
+
+  .middle {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    height: 150px;
+    border-top: 3px solid #0B998F;
+    border-bottom: 3px solid #0B998F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-cercle {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 3px solid #0B998F;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+  }
+
+  .middle-line {
+    width: 100%;
+    height: 1px;
+    border-top: 3px dashed #EB1133;
+  }
+
+  .goal-brick {
+    width: 150px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -25px;
+    border-bottom: 3px solid #F97612;
+    position: absolute;
+    top: 0;
+    left: 125;
+  }
+
+  .goal-player {
+    width: 150px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: -25px;
+    border-top: 3px solid #F97612;
+    position: absolute;
+    bottom: 0;
+    left: 125;
+  }
+
+  .transform-green {
+    height: 75px;
+    width: 75px;
+    border: 3px dashed #268E00;
+    border-radius: 50%;
+  }
+
+  .transform-blue {
+    height: 75px;
+    width: 75px;
+    border: 3px dashed #27586B;
+    border-radius: 50%;
+  }
+
+  .transform-yellow {
+    height: 75px;
+    width: 75px;
+    border: 3px dashed #D4D46A;
+    border-radius: 50%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .brick-yellow {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #FFFEAA;
+    border: 4px solid #D4D46A;
+  }
+
+  .brick-green {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #2FAD00;
+    border: 4px solid #268E00;
+  }
+
+  .brick-blue {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #6D92A0;
+    border: 4px solid #27586B;
+  }
+</style>
