@@ -1,5 +1,7 @@
 {
   "name": "brick-hockey",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
